@@ -7,8 +7,8 @@ if (updateButton && updateNote) {
 
     updateButton.setAttribute('aria-expanded', String(!isOpen));
     updateButton.innerHTML = isOpen
-      ? 'Xem ghi chú phiên bản <span aria-hidden="true">↓</span>'
-      : 'Đã xem ghi chú <span aria-hidden="true">↑</span>';
+      ? 'Xem cập nhật 2.0 <span aria-hidden="true">↓</span>'
+      : 'Đã xem cập nhật <span aria-hidden="true">↑</span>';
     updateNote.hidden = isOpen;
   });
 }
