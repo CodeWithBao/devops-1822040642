@@ -13,6 +13,7 @@
   --shadow: 0 18px 55px rgba(38, 47, 41, 0.09);
   --radius-lg: 28px;
   --radius-md: 18px;
+  --font-sans: "Be Vietnam Pro", "Segoe UI", Arial, sans-serif;
 }
 
 * {
@@ -30,8 +31,9 @@ body {
     radial-gradient(circle at 88% 6%, rgba(217, 239, 232, 0.9) 0, rgba(217, 239, 232, 0) 27rem),
     var(--paper);
   color: var(--ink);
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  line-height: 1.55;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 button,
@@ -88,7 +90,7 @@ a {
   gap: 10px;
   color: var(--ink);
   font-size: 0.94rem;
-  font-weight: 760;
+  font-weight: 700;
   letter-spacing: -0.015em;
   text-decoration: none;
 }
@@ -101,14 +103,15 @@ a {
   border-radius: 50%;
   background: var(--ink);
   color: #fff;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.05rem;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 800;
 }
 
 .release-tag,
 .eyebrow {
   font-size: 0.72rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.105em;
   text-transform: uppercase;
 }
@@ -158,16 +161,21 @@ p {
 h1,
 h2,
 h3 {
-  font-family: Georgia, "Times New Roman", serif;
-  font-weight: 500;
+  font-family: var(--font-sans);
+  font-weight: 700;
 }
 
 h1 {
-  max-width: 790px;
+  max-inline-size: 15ch;
   margin-bottom: 24px;
-  font-size: clamp(3.15rem, 7.1vw, 6.55rem);
-  letter-spacing: -0.06em;
-  line-height: 0.93;
+  font-size: clamp(2.5rem, 5.8vw, 5.25rem);
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+.student-id {
+  white-space: nowrap;
 }
 
 .lead {
@@ -197,7 +205,7 @@ h1 {
   background: var(--forest);
   color: #fff;
   cursor: pointer;
-  font-weight: 720;
+  font-weight: 700;
   transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
 }
 
@@ -221,7 +229,7 @@ h1 {
 
 .text-link {
   color: var(--forest-dark);
-  font-weight: 720;
+  font-weight: 700;
 }
 
 .text-link:hover,
@@ -274,7 +282,7 @@ h1 {
   justify-content: space-between;
   color: var(--ink-soft);
   font-size: 0.77rem;
-  font-weight: 750;
+  font-weight: 700;
 }
 
 .online-status {
@@ -292,17 +300,19 @@ h1 {
 .version-number {
   margin-top: 18px;
   color: var(--ink);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(4.7rem, 8vw, 6.75rem);
-  letter-spacing: -0.085em;
-  line-height: 0.88;
+  font-family: var(--font-sans);
+  font-size: clamp(4.25rem, 7vw, 6rem);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
 }
 
 .release-card p {
-  max-width: 240px;
+  max-width: none;
   margin: 20px 0 29px;
   color: var(--ink-soft);
   font-size: 0.95rem;
+  line-height: 1.65;
 }
 
 .release-card dl {
@@ -324,7 +334,7 @@ h1 {
   margin: 0;
   color: var(--ink);
   font-size: 0.9rem;
-  font-weight: 750;
+  font-weight: 700;
 }
 
 .story {
@@ -338,9 +348,10 @@ h1 {
 .section-heading h2,
 .closing h2 {
   margin-bottom: 16px;
-  font-size: clamp(2.15rem, 4vw, 3.6rem);
-  letter-spacing: -0.045em;
-  line-height: 0.99;
+  font-size: clamp(2rem, 3.6vw, 3.35rem);
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  text-wrap: balance;
 }
 
 .section-heading > p:last-child,
@@ -372,7 +383,7 @@ h1 {
 .journey-number {
   color: var(--forest);
   font-size: 0.76rem;
-  font-weight: 840;
+  font-weight: 800;
   letter-spacing: 0.08em;
 }
 
@@ -444,6 +455,23 @@ h1 {
   outline-offset: 4px;
 }
 
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    gap: 36px;
+    padding-block: clamp(48px, 8vw, 72px);
+  }
+
+  .hero-copy {
+    max-width: 44rem;
+  }
+
+  .release-card {
+    max-width: 36rem;
+  }
+}
+
 @media (max-width: 760px) {
   .site-header,
   .hero,
@@ -454,13 +482,11 @@ h1 {
   }
 
   .hero {
-    grid-template-columns: 1fr;
-    min-height: 0;
-    padding-block: 60px 72px;
+    padding-block: 52px 64px;
   }
 
   .release-card {
-    max-width: 500px;
+    max-width: 100%;
   }
 
   .story,
@@ -493,7 +519,9 @@ h1 {
   }
 
   h1 {
-    font-size: clamp(3rem, 16vw, 4.4rem);
+    font-size: clamp(2.25rem, 11vw, 3.25rem);
+    letter-spacing: -0.025em;
+    line-height: 1.1;
   }
 
   .journey li {
