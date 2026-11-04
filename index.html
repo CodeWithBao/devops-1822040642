@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Trang giới thiệu bài tập triển khai website tự động với GitHub Actions của Phạm Đình Bảo.">
+  <title>Phiên bản 1.0 | Phạm Đình Bảo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#noi-dung">Đi đến nội dung chính</a>
+
+  <header class="site-header">
+    <a class="brand" href="#trang-chu" aria-label="Về đầu trang">
+      <span class="brand-mark" aria-hidden="true">B</span>
+      <span>Nhật ký triển khai</span>
+    </a>
+    <span class="release-tag">Phiên bản 1.0</span>
+  </header>
+
+  <main id="noi-dung">
+    <section class="hero" id="trang-chu" aria-labelledby="student-name">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse" aria-hidden="true"></span> GitHub Pages đã sẵn sàng</p>
+        <h1 id="student-name">Phạm Đình Bảo - 1822040642</h1>
+        <p class="lead">Một website nhỏ được đưa lên internet bằng quy trình tự động: kiểm tra trước, triển khai sau, để mỗi lần cập nhật đều rõ ràng và yên tâm hơn.</p>
+        <div class="hero-actions">
+          <button class="primary-button" id="updateButton" type="button" aria-expanded="false" aria-controls="updateNote">
+            Xem ghi chú phiên bản
+            <span aria-hidden="true">↓</span>
+          </button>
+          <a class="text-link" href="https://github.com/CodeWithBao/devops-1822040642" target="_blank" rel="noopener noreferrer">
+            Xem mã nguồn <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <p class="update-note" id="updateNote" hidden>Phiên bản đầu tiên đã sẵn sàng để kiểm tra tự động trước khi được đưa lên GitHub Pages.</p>
+      </div>
+
+      <aside class="release-card" aria-label="Thông tin phiên bản hiện tại">
+        <div class="release-card__top">
+          <span>Trạng thái phát hành</span>
+          <span class="online-status"><i aria-hidden="true"></i> Online</span>
+        </div>
+        <div class="version-number">1.0</div>
+        <p>Đang chờ pipeline kiểm tra trước khi được triển khai.</p>
+        <dl>
+          <div>
+            <dt>Nhánh</dt>
+            <dd>main</dd>
+          </div>
+          <div>
+            <dt>Nơi chạy</dt>
+            <dd>GitHub Pages</dd>
+          </div>
+        </dl>
+      </aside>
+    </section>
+
+    <section class="story" aria-labelledby="story-title">
+      <div class="section-heading">
+        <p class="eyebrow">Cách bản cập nhật đi đến người xem</p>
+        <h2 id="story-title">Ba chặng, một lần push</h2>
+        <p>Mỗi thay đổi bắt đầu từ một chỉnh sửa nhỏ và chỉ được xuất bản khi các điều kiện cơ bản đã được xác nhận.</p>
+      </div>
+
+      <ol class="journey">
+        <li>
+          <span class="journey-number">01</span>
+          <div>
+            <h3>Viết lại thật gọn</h3>
+            <p>HTML, CSS và JavaScript nằm cùng một nơi để trang nhẹ, dễ xem và dễ tiếp tục chỉnh sửa.</p>
+          </div>
+        </li>
+        <li>
+          <span class="journey-number">02</span>
+          <div>
+            <h3>Kiểm tra trước khi đi xa</h3>
+            <p>GitHub Actions xác nhận đủ ba tệp cần thiết và chắc chắn trang vẫn còn thẻ tiêu đề.</p>
+          </div>
+        </li>
+        <li>
+          <span class="journey-number">03</span>
+          <div>
+            <h3>Đưa phiên bản mới lên trang</h3>
+            <p>Khi kiểm tra đạt, GitHub Pages tự động nhận bản cập nhật để người xem có thể truy cập ngay.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="closing" aria-labelledby="closing-title">
+      <div>
+        <p class="eyebrow">Ghi chú thực hành</p>
+        <h2 id="closing-title">Lỗi được phát hiện trước khi người dùng nhìn thấy.</h2>
+      </div>
+      <p>Trong bài thực hành này, việc xóa thẻ <code>&lt;title&gt;</code> khiến pipeline dừng lại ở bước kiểm tra. Bản cập nhật chỉ tiếp tục được triển khai sau khi lỗi đã được khôi phục.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>DevOps CI/CD · Bài tập cá nhân</p>
+    <a href="https://github.com/CodeWithBao" target="_blank" rel="noopener noreferrer">CodeWithBao <span aria-hidden="true">↗</span></a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
